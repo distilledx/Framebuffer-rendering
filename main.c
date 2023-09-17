@@ -19,7 +19,9 @@ int main()
 
     long screensize = vinfo.yres_virtual * finfo.line_length;
     uint8_t *fbp = mmap(0, screensize, PROT_READ | PROT_WRITE, MAP_SHARED, fb_fd, (off_t)0);
-    printf("%u\n", finfo.type);
+
+    long x, y;
+    uint32_t pixel;
 
     return 0;
 }
