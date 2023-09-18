@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
+#include <time.h>
+#include <linux/kd.h>
 #include <unistd.h>
 
 uint32_t pixel_color(uint8_t r, uint8_t g, uint8_t b, struct fb_var_screeninfo *vinfo)
@@ -13,6 +15,8 @@ uint32_t pixel_color(uint8_t r, uint8_t g, uint8_t b, struct fb_var_screeninfo *
 
 int main()
 {
+    int tty_fd = open("/dev/tty2", O_RDWR);
+    ioctl(tty_fd, KDSETMODE, KD_GRAPHICS);
     int fb_fd = open("/dev/fb0", O_RDWR);
     struct fb_fix_screeninfo finfo;
     struct fb_var_screeninfo vinfo;
@@ -34,9 +38,13 @@ int main()
             long location = (x + vinfo.xoffset) * (vinfo.bits_per_pixel / 8) + (y + vinfo.yoffset) * finfo.line_length;
             *((uint32_t *)(fbp + location)) = pixel_color(0xFF, 0x00, 0xFF, &vinfo);
         }
-    sleep(1);
+
+    struct timespec remaining, request = {1, 0};
+    nanosleep(&request, &remaining);
+    ioctl(tty_fd, KDSETMODE, KD_TEXT);
     munmap(fbp, screensize);
     close(fb_fd);
+    close(tty_fd);
 
     return 0;
 }
