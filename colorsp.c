@@ -20,7 +20,7 @@ int main()
     for (x = 0; x < fbi.vinfo.xres; x++)
         for (y = 0; y < fbi.vinfo.yres; y++)
         {
-            render(x, y, pixel_color(0xFF, 0x00, 0xFF, &fbi.vinfo), &fbi.vinfo, &fbi.finfo, fbi.fbp);
+            render(x, y, pixel_color(0xFF, 0xCF, 0xCF, &fbi.vinfo), &fbi.vinfo, &fbi.finfo, fbi.fbp);
         }
 
     sleep(1);
