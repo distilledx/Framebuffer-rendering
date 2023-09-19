@@ -22,8 +22,12 @@ Run `./install.sh`. Go to the `build` directly and execute any of the files.
 
 OR
 
-`gcc ./src/colorsp.c ./src/main.c -o colorsplash` for displaying fullscreen splashes of a single color.
+`gcc ./src/colorsp.c ./src/main.c -o ./build/colorsplash` for displaying fullscreen splashes of a single color.
 
-`gcc ./src/imagesp.c ./helpers/lodepng.c ./src/main.c -o imagesplash` for displaying an image.
+`gcc ./src/imagesp.c ./helpers/lodepng.c ./src/main.c -o ./build/imagesplash` for displaying an image.
+
+### Running
+
+`cd build` before running. All need `sudo` permissions as they access `/dev/fb0` and `/dev/tty2`.
 
 To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png`.
