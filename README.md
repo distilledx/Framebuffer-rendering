@@ -12,6 +12,17 @@ To switch your virtual terminal to tty2, press ctrl+alt+f3. You can always retur
 To clear any artifacts from your virtual terminal, just type `clear`.
 
 -   [x] Display fullscreen splashes
--   [x] Read and map pixel data from an image (partial transparency not supported. default modes on most framebuffers don't assign)
+-   [x] Read and map pixel data from an image (partial transparency not supported. default modes on most framebuffers don't assign a byte for this)
 -   [ ] Read and map pixel data from a gif
 -   [ ] Read data from a gif and make it translate across the screen
+
+### Building
+
+Run `./install.sh`. Go to the `build` directly and execute any of the files.
+
+OR
+
+`gcc ./src/colorsp.c ./src/main.c -o colorsplash` for displaying fullscreen splashes of a single color.
+`gcc ./src/imagesp.c ./helpers/lodepng.c ./src/main.c -o imagesplash` for displaying an image.
+
+To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png`.
