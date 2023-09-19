@@ -17,7 +17,7 @@
 int main()
 {
     unsigned char *image;
-    int width, height, startx, starty, endx, endy;
+    int width, height, startx, starty;
 
     struct FramebufferInfo fbi;
     initfb(&fbi);
