@@ -10,8 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "./helpers/lodepng.h"
-#include "./src/main.h"
+#include "../helpers/lodepng.h"
+#include "main.h"
 #include <unistd.h>
 
 int main()
@@ -22,7 +22,7 @@ int main()
     struct FramebufferInfo fbi;
     initfb(&fbi);
 
-    unsigned error = lodepng_decode32_file(&image, &width, &height, "./media/image.png");
+    unsigned error = lodepng_decode32_file(&image, &width, &height, "../media/image.png");
 
     if (error)
     {

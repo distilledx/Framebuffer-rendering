@@ -12,6 +12,6 @@ To switch your virtual terminal to tty2, press ctrl+alt+f3. You can always retur
 To clear any artifacts from your virtual terminal, just type `clear`.
 
 -   [x] Display fullscreen splashes
--   [ ] Read and map pixel data from an image
+-   [x] Read and map pixel data from an image (partial transparency not supported. default modes on most framebuffers don't assign)
 -   [ ] Read and map pixel data from a gif
 -   [ ] Read data from a gif and make it translate across the screen

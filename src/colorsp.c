@@ -7,7 +7,7 @@
 //
 // Display a full screen of a single color
 
-#include "./src/main.h"
+#include "main.h"
 #include <unistd.h>
 
 int main()
