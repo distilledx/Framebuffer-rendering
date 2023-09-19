@@ -31,3 +31,5 @@ OR
 `cd build` before running. All need `sudo` permissions as they access `/dev/fb0` and `/dev/tty2`.
 
 To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png`.
+
+Eg: `➜  build git:(main) sudo ./imagesplash`
