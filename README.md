@@ -23,6 +23,7 @@ Run `./install.sh`. Go to the `build` directly and execute any of the files.
 OR
 
 `gcc ./src/colorsp.c ./src/main.c -o colorsplash` for displaying fullscreen splashes of a single color.
+
 `gcc ./src/imagesp.c ./helpers/lodepng.c ./src/main.c -o imagesplash` for displaying an image.
 
 To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png`.
