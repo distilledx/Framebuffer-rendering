@@ -25,7 +25,7 @@ OR
 
 `gcc ./src/imagesp.c ./helpers/lodepng.c ./src/main.c -o ./build/imagesplash` for displaying an image.
 
-`gcc ./src/gifsp.c ./src/main.c  -o ./build/gifsp -lgif` for displaying 5 iterations of a gif.
+`gcc ./src/gifsp.c ./src/main.c  -o ./build/gifsplash -lgif` for displaying 5 iterations of a gif.
 
 ### Running
 
