@@ -14,7 +14,6 @@ To clear any artifacts from your virtual terminal, just type `clear`.
 -   [x] Display fullscreen splashes
 -   [x] Read and map pixel data from an image (partial transparency not supported. default modes on most framebuffers don't assign a byte for this)
 -   [ ] Read and map pixel data from a gif
--   [ ] Read data from a gif and make it translate across the screen
 
 ### Building
 
