@@ -13,7 +13,7 @@ To clear any artifacts from your virtual terminal, just type `clear`.
 
 -   [x] Display fullscreen splashes
 -   [x] Read and map pixel data from an image (partial transparency not supported. default modes on most framebuffers don't assign a byte for this)
--   [x] Read and map pixel data from a gif (Requires `giflib` package. Some GIFs either do not display properly or don't display at all. This is unimportant as the point of this project was to learn about the framebuffer, and not GIF decoding ;) )
+-   [x] Read and map pixel data from a gif (Requires `giflib` package. Some GIFs either do not display properly or don't display at all. This is unimportant as the point of this project was to learn about the framebuffer, and not GIF decoding ;)
 
 ### Building
 
