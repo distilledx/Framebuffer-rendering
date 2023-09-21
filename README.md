@@ -13,7 +13,7 @@ To clear any artifacts from your virtual terminal, just type `clear`.
 
 -   [x] Display fullscreen splashes
 -   [x] Read and map pixel data from an image (partial transparency not supported. default modes on most framebuffers don't assign a byte for this)
--   [ ] Read and map pixel data from a gif
+-   [x] Read and map pixel data from a gif (Requires `giflib` package. Some GIFs either do not display properly or don't display at all. This is unimportant as the point of this project was to learn about the framebuffer, and not GIF decoding ;) )
 
 ### Building
 
@@ -25,10 +25,12 @@ OR
 
 `gcc ./src/imagesp.c ./helpers/lodepng.c ./src/main.c -o ./build/imagesplash` for displaying an image.
 
+`gcc ./src/gifsp.c ./src/main.c  -o ./build/gifsp -lgif` for displaying 5 iterations of a gif.
+
 ### Running
 
 `cd build` before running. All executables need `sudo` permissions as they access `/dev/fb0` and `/dev/tty2`.
 
-To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png`.
+To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png` (similarly with gifs).
 
 Eg: `build$ sudo ./imagesplash`
