@@ -33,4 +33,17 @@ OR
 
 To set a custom image, replace `media/image.png` with your own `PNG` file and rename it `image.png` (similarly with gifs).
 
-Eg: `build$ sudo ./imagesplash`
+Eg: `$ sudo ./imagesplash`
+
+### Examples
+Color spash
+
+![](https://github.com/distilledx/Framebuffer-rendering/blob/main/examples/splash.gif)
+
+Image splash
+
+![](https://github.com/distilledx/Framebuffer-rendering/blob/main/examples/image.gif)
+
+Gif splash
+
+![](https://github.com/distilledx/Framebuffer-rendering/blob/main/examples/gif.gif)
